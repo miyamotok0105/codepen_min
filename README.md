@@ -15,3 +15,6 @@ npm install
 # run.
 npm run serve
 ```
+
+
+![alt text](https://github.com/miyamotok0105/codepen_min/blob/master/img/img1.jpg)
