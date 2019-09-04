@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <Main />
+    <nav class="router-nav">
+        <router-link to='/'>Main</router-link>
+        <br />
+        <router-link to='/genarate'>Generate</router-link>
+        
+    </nav>
+    <router-view />
   </div>
 </template>
 
@@ -24,4 +30,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.router-nav {
+  margin-left: 20%;
+  margin-right: auto;
+  text-align: left;
+}
+
 </style>

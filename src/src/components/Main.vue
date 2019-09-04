@@ -73,9 +73,9 @@
       doc.open();
       //ここでhtmlのドキュメントを書き込む。
       //この内容をiframeに表示する。
-      doc.write(this.html+"<style>"+this.css+"<\/style>");
+      doc.write(this.html+"<style>"+this.css+"</style>");
       doc.close();
-    }
+    },
   },
   watch: {
     // この関数は html css が変わるごとに実行されます。
