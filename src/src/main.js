@@ -1,9 +1,13 @@
 import Vue from 'vue'
+import store from './store/store'
+import { sync } from 'vuex-router-sync'
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
 import App from './App.vue'
 import Main from './components/Main.vue'
 import Genarate from './components/Genarate.vue'
 
-// window.Vue = require('vue');
 Vue.config.productionTip = false
 
 
@@ -13,8 +17,6 @@ const routes = [
     {path: '/genarate', component: Genarate, meta: {}},
 ];
 
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
 
 
 const router = new VueRouter({
@@ -22,12 +24,10 @@ const router = new VueRouter({
     // linkActiveClass: 'active',
     mode: 'history',
 });
-
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
+sync(store, router);
 
 new Vue({
     render: h => h(App),
+    store,
     router
 }).$mount('#app')
